@@ -1,0 +1,28 @@
+{
+  "name": "12-Eat-Da-Burger-2",
+  "version": "1.0.0",
+  "description": "The same project as the previous but with Sequelize instead of a custom ORM",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql2": "^2.0.1",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astrobeef/12-Eat-Da-Burger-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astrobeef/12-Eat-Da-Burger-2/issues"
+  },
+  "homepage": "https://github.com/astrobeef/12-Eat-Da-Burger-2#readme"
+}
