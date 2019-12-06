@@ -19,7 +19,7 @@ router.get("/", function(req, res){
         }
         
         res.render("index", burgersObj);
-    })
+    });
 });
 
 module.exports = router;

@@ -16,7 +16,6 @@ router.get("/", function(req, res){
 
 router.put("/:id", function(req, res){
     const burgerID = req.params.id;
-    console.log(`./${burgerID} PUT :: req.body : ${req.body}`);
 
     db.burgers.update(req.body, {
         where : {
@@ -26,7 +25,6 @@ router.put("/:id", function(req, res){
         if(error){
             res.sendStatus(500);
         }
-
         res.sendStatus(200);
     });
 });
