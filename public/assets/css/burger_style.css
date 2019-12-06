@@ -1,0 +1,9 @@
+.burger-box{
+    background-color: #c77346;
+}
+
+.burger-devoured-text{
+    color : #732315;
+    font-size: larger;
+    list-style-type:none;
+}

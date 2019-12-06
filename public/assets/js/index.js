@@ -13,6 +13,17 @@ const API = {
         }).then(function(){
             location.reload();
         });
+    },
+    addBurger: function(burgerName){
+        return $.ajax({
+            url: `api/burgers/${burgerName}`,
+            type : "POST",
+            data : {
+                "burger_name" : burgerName
+            }
+        }).then(function(){
+            location.reload();
+        });
     }
 };
 
@@ -38,7 +49,7 @@ $burgerSubmit.click(function(event){
 
     console.log(burgerName);
 
-    API.setEaten(burgerName);
+    API.addBurger(burgerName);
 
 })
 
