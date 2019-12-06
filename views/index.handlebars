@@ -1,33 +1,67 @@
 {{!-- Contents of the main page--}}
 
-<ul id = "burger-container">
+<div class="container" style="height : 800px">
 
-{{#each burgers}}
+    <div class="row justify-content-center mt-5 pt-5">
 
-{{#if this.devoured}}
+        <h1>Eat Da Burger!</h1>
 
-{{else}}
+    </div>
 
-<li id = "burger-{{this.id}}">{{this.burger_name}}</li>
+    <div class="row">
+        <div class="col-4 border my-5">
+            <ul id="burger-container">
 
-{{/if}}
+                {{#each burgers}}
+
+                {{#if this.devoured}}
+
+                {{else}}
+
+                <div class="row my-3">
+
+                    <li class="col-6 align-self-center">{{this.burger_name}}</li>
+
+                    <button id="burger-{{this.id}}" type="button" class="btn btn-warning col-4 mr-3">Devour it!</button>
+
+                </div>
 
 
-{{/each}}
-
-</ul>
-
-<ul id = "eaten-container" class = "text-danger">
-
-{{#each burgers}}
-
-{{#if this.devoured}}
-
-<li id = "burger-{{this.id}}">{{this.burger_name}}</li>
-
-{{/if}}
+                {{/if}}
 
 
-{{/each}}
+                {{/each}}
 
-</ul>
+            </ul>
+        </div>
+        <div class="col-4 border my-5 offset-4">
+            <ul id="eaten-container" class="text-danger">
+
+                {{#each burgers}}
+
+                {{#if this.devoured}}
+
+                <li id="burger-{{this.id}}">{{this.burger_name}}</li>
+
+                {{/if}}
+
+
+                {{/each}}
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-4 border">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text my-2">Enter the name of the burger you want to eat</span>
+                </div>
+                <textarea id = "input-burger" class="form-control" aria-label="With textarea"></textarea>
+
+            </div>
+            <button id="submit-burger" type="button" class="btn btn-warning col-12 my-3">Devour it!</button>
+        </div>
+    </div>
+</div>

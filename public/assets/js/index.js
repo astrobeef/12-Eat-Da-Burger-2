@@ -1,4 +1,6 @@
 $burgers = $("#burger-container");
+$burgerInput = $("#input-burger");
+$burgerSubmit = $("#submit-burger");
 
 const API = {
     setEaten: function (id) {
@@ -27,6 +29,16 @@ $burgers.click(function (event) {
     else{
         console.warn("no ID attached");
     }
+
+})
+
+$burgerSubmit.click(function(event){
+
+    burgerName = $burgerInput.val().trim();
+
+    console.log(burgerName);
+
+    API.setEaten(burgerName);
 
 })
 
