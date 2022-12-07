@@ -4,7 +4,7 @@
   "description": "The same project as the previous but with Sequelize instead of a custom ORM",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1",
     "mysql2": "^2.0.1",
